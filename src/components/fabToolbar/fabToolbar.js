@@ -6,22 +6,22 @@
    * @name material.components.fabToolbar
    */
   angular
-    // Declare our module
-    .module('material.components.fabToolbar', [
-      'material.core',
-      'material.components.fabShared',
-      'material.components.fabTrigger',
-      'material.components.fabActions'
-    ])
+  // Declare our module
+      .module('material.components.fabToolbar', [
+        'material.core',
+        'material.components.fabShared',
+        'material.components.fabTrigger',
+        'material.components.fabActions'
+      ])
 
-    // Register our directive
-    .directive('mdFabToolbar', MdFabToolbarDirective)
+      // Register our directive
+      .directive('mdFabToolbar', MdFabToolbarDirective)
 
-    // Register our custom animations
-    .animation('.md-fab-toolbar', MdFabToolbarAnimation)
+      // Register our custom animations
+      .animation('.md-fab-toolbar', MdFabToolbarAnimation)
 
-    // Register a service for the animation so that we can easily inject it into unit tests
-    .service('mdFabToolbarAnimation', MdFabToolbarAnimation);
+      // Register a service for the animation so that we can easily inject it into unit tests
+      .service('mdFabToolbarAnimation', MdFabToolbarAnimation);
 
   /**
    * @ngdoc directive
@@ -54,15 +54,17 @@
    *     <md-button aria-label="Add..."><md-icon icon="/img/icons/plus.svg"></md-icon></md-button>
    *   </md-fab-trigger>
    *
-   *   <md-fab-actions>
-   *     <md-button aria-label="Add User">
-   *       <md-icon icon="/img/icons/user.svg"></md-icon>
-   *     </md-button>
+   *   <md-toolbar>
+   *    <md-fab-actions>
+   *      <md-button aria-label="Add User">
+   *        <md-icon icon="/img/icons/user.svg"></md-icon>
+   *      </md-button>
    *
-   *     <md-button aria-label="Add Group">
-   *       <md-icon icon="/img/icons/group.svg"></md-icon>
-   *     </md-button>
-   *   </md-fab-actions>
+   *      <md-button aria-label="Add Group">
+   *        <md-icon icon="/img/icons/group.svg"></md-icon>
+   *      </md-button>
+   *    </md-fab-actions>
+   *   </md-toolbar>
    * </md-fab-toolbar>
    * </hljs>
    *
@@ -96,7 +98,7 @@
 
       // Prepend the background element to the trigger's button
       element.find('md-fab-trigger').find('button')
-        .prepend('<div class="md-fab-toolbar-background"></div>');
+          .prepend('<div class="md-fab-toolbar-background"></div>');
     }
   }
 
